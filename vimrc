@@ -76,6 +76,9 @@ unlet s:save_diff
 " 2. Allgemeine Einstellungen
 " ---------------------------
 
+" gq: Zum erkennen der Formatierung beim zitieren z.B. Emails
+set comments=fb:-,fb:+,fb:=,fb:*,nb:>,fb:#,fb:)
+
 " Normalerweise ist Vim 'compatible', emuliert also den klassischen vi.
 " Wir wollen dies natürlich nicht, schließlich nutzen wir Vim statt vi.
 " Schaltet die meisten folgenden Optionen erst frei.
@@ -166,7 +169,7 @@ set showmatch
 
 " Maximale Zeilenlänge, automatischer Umbruch wenn diese überschritten
 " wird.
-set textwidth=72
+" set textwidth=80
 
 " Den Terminal-Titel auf den Namen der aktuellen Datei setzen.
 set title
@@ -178,13 +181,13 @@ set updatetime=2000
 
 " Erlaube in allen Modi freie Cursorpositionierung, unabhängig der
 " bereits eingegeben Zeichen.
-set virtualedit=all
+" set virtualedit=all
 
 " Visuelle Benachrichtigung anstatt piepen.
 set visualbell
 
 " Überlange Zeilen zur Darstellung umbrechen.
-set wrap
+set wrap!
 
 " ----
 
@@ -253,7 +256,7 @@ if has("gui_running")
 		set encoding=utf-8
 	else
 		" Die von gvim genutzte Schriftart.
-		set guifont=Inconsolata\ 11
+		set guifont=Inconsolata\ 10
 	endif
 
 	" Keine nervende Symbol- und Menüleiste.
@@ -285,6 +288,7 @@ endif
 " ----
 
 " Unser Farbschema laden...
+" colorscheme jellybeans
 colorscheme lucius
 
 " ...und auf 'dunkel' zwingen.
@@ -366,7 +370,8 @@ filetype indent on
 " nötig automagisch ermitteln, aber oft reicht es nicht aus, da der
 " Syntax der jeweiligen Sprache zu komplex ist. Wenn es ein Plugin für
 " den aktuellen Dateityp gibt, wollen wir dies daher nutzen.
-filetype plugin indent on
+" filetype plugin indent on
+filetype plugin off
 
 " =====================================================================
 
