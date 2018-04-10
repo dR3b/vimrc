@@ -225,13 +225,16 @@ set statusline=%<\ %n:%f\ %m%r%y%=line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)
 " ----
 
 " Automatische Einrückung aus 'tabstop' bestimmen.
-set shiftwidth=4
+set shiftwidth=2
 
 " Nehme alle 'tabstop" Leerzeichen einen Tab statt der Leerzeichen.
 set softtabstop=-1
 
+" expandtab
+set expandtab
+
 " Ein Tabstop sind vier Leerzeichen.
-set tabstop=4
+set tabstop=2
 
 " ----
 
